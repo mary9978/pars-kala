@@ -245,6 +245,9 @@ export default function RootLayout({ children }) {
           {children}
         </div>
         <Footer />
+
+        <script src="node_modules/@material-tailwind/html/scripts/collapse.js"></script>
+        <script src="https://unpkg.com/@material-tailwind/html@latest/scripts/collapse.js"></script>
       </body>
     </html>
   );
