@@ -4,15 +4,32 @@ import Logo from "../../public/img/logo1.png";
 import Search from "../../public/img/serchimg.jpg";
 import { provinces } from "../data";
 import React, { useState, useEffect, useRef } from "react";
+import MegaMenu from "./MegaMenu";
 
 function Header() {
   const [isSearchModalOpen, setIsSearchModalOpen] = useState(false);
   const [isCartModalOpen, setIsCartModalOpen] = useState(false);
   const [isCityModalOpen, setIsCityModalOpen] = useState(false);
   const [isAccountModalOpen, setIsAccountModalOpen] = useState(false);
+  const [isMenuModalOpen, setIsMenuModalOpen] = useState(false);
 
   const [selectedList, setSelectedList] = useState(provinces);
   const [isInitialList, setIsInitialList] = useState(true);
+
+  const wrapperRef = useRef(null);
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (wrapperRef.current && !wrapperRef.current.contains(event.target)) {
+        setIsMenuModalOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isMenuModalOpen]);
 
   const handleItemClick = (city) => {
     const filteredProvinces = provinces.filter((item) => item.name === city);
@@ -31,7 +48,10 @@ function Header() {
     <>
       <div className="z-50 menu max-w-[1280px] w-[95%] lg:w-full h-[60px] rounded-2xl lg:rounded-none bg-white px-2 lg:px-3 py-2.5 shadow-md lg:shadow-none fixed top-2">
         <div className="flex gap-2 items-center justify-between w-full">
-          <div className="inline-block text-Secendry-300 lg:hidden">
+          <div
+            className="inline-block text-Secendry-300 lg:hidden"
+            onClick={() => setIsMenuModalOpen(true)}
+          >
             <svg className="w-6 h-6">
               <use xlinkHref="#menu"></use>
             </svg>
@@ -466,6 +486,9 @@ function Header() {
             <b>حساب کاربری</b>
           </span>
         </div>
+      </div>
+      <div className={`${isMenuModalOpen ? "" : "hidden"}`} ref={wrapperRef}>
+        <MegaMenu />
       </div>
     </>
   );
