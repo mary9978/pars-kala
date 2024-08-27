@@ -18,7 +18,7 @@ export default function Carousel() {
   return (
     <div
       id="container"
-      class="container bg-neutral-100 relative p-2 max-w-[1280px] w-full flex justify-center mt-5 lg:mt-20"
+      className="container bg-neutral-100 relative p-2 max-w-[1280px] w-full flex justify-center mt-5 lg:mt-20"
     >
       <Swiper
         modules={[Autoplay, Pagination, Navigation]}
@@ -33,19 +33,19 @@ export default function Carousel() {
         onAutoplayTimeLeft={onAutoplayTimeLeft}
       >
         <SwiperSlide>
-          <img src="./img/head1.jpg" class="w-full h-full" alt="" />
+          <img src="./img/head1.jpg" className="w-full h-full" alt="" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="./img/head2.jpg" class="w-full h-full" alt="" />
+          <img src="./img/head2.jpg" className="w-full h-full" alt="" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="./img/head3.jpg" class="w-full h-full" alt="" />
+          <img src="./img/head3.jpg" className="w-full h-full" alt="" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="./img/head4.jpg" class="w-full h-full" alt="" />
+          <img src="./img/head4.jpg" className="w-full h-full" alt="" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="./img/head5.jpg" class="w-full h-full" alt="" />
+          <img src="./img/head5.jpg" className="w-full h-full" alt="" />
         </SwiperSlide>
         <div className="autoplay-progress" slot="container-end">
           <svg viewBox="0 0 48 48" ref={progressCircle}>
