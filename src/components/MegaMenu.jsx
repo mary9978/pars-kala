@@ -16,7 +16,7 @@ import { MdFavoriteBorder, MdOutlineArticle } from "react-icons/md";
 export default function MegaMenu() {
   const [mainIsShowing, setMainIsShowing] = useState(true);
   return (
-    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-[#FDFDFD] text-slate-800 rounded-2xl w-[90vw] h-[80vh] shadow-[0_3px_10px_rgb(0,0,0,0.2)] lg:flex">
+    <div className="absolute z-50 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-[#FDFDFD] text-slate-800 rounded-2xl w-[90vw] h-[80vh] shadow-[0_3px_10px_rgb(0,0,0,0.2)] lg:flex">
       <ul className={`${mainIsShowing?'':'hidden lg:block'} h-full lg:w-[300px] my-2 flex flex-col py-4 *:flex *:gap-4 *:p-4  *:text-lg hover:*:bg-slate-100 *:transition *:ease-in-out *:duration-500 *:transform `}>
         <li>
           <BiHomeAlt size={30} />
