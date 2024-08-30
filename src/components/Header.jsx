@@ -5,6 +5,7 @@ import Search from "../../public/img/serchimg.jpg";
 import { provinces } from "../data";
 import React, { useState, useEffect, useRef } from "react";
 import MegaMenu from "./MegaMenu";
+import SecondHeader from "./Header/SecondHeader";
 
 function Header() {
   const [isSearchModalOpen, setIsSearchModalOpen] = useState(false);
@@ -46,8 +47,8 @@ function Header() {
 
   return (
     <>
-      <div className="z-50 menu max-w-[1280px] w-[95%] lg:w-full h-[60px] rounded-2xl lg:rounded-none bg-white px-2 lg:px-3 py-2.5 shadow-md lg:shadow-none fixed top-2">
-        <div className="flex gap-2 items-center justify-between w-full">
+      <div className="z-50 menu max-w-[1280px] w-[95%] lg:w-full h-[60px] lg:h-auto rounded-2xl lg:rounded-none bg-white px-2 py-2.5 shadow-md fixed flex flex-col top-2 lg:top-0 justify-center lg:p-0 lg:shadow-[0px_1px_1px_1px_#e2e8f0] lg:border-b lg:border-b-secondary-100">
+        <div className="flex gap-2 items-center justify-between w-full lg:p-4 lg:pb-0">
           <div
             className="inline-block text-Secendry-300 lg:hidden"
             onClick={() => setIsMenuModalOpen(true)}
@@ -208,6 +209,7 @@ function Header() {
             </div>
           </div>
         </div>
+        <SecondHeader/>
       </div>
       {/* <!-- filteMobile --> */}
       <div className="showModalFilter z-50 w-[95%] mt-14 flex items-center justify-between lg:hidden h-[100px]">
@@ -368,7 +370,7 @@ function Header() {
           <div className="citySearch flex flex-col w-full items-center justify-center relative">
             {isInitialList ? (
               selectedList.map((item) => (
-                <div className="border-b border-Secendry-100 w-[90%] flex items-center justify-between p-2">
+                <div key={item.name} className="border-b border-Secendry-100 w-[90%] flex items-center justify-between p-2">
                   <button
                     type="button"
                     key={item.name}
@@ -408,7 +410,7 @@ function Header() {
                   </div>
 
                   {selectedList[0].counties.map((item) => (
-                    <div className="border-b border-Secendry-100 flex items-center p-2 w-full">
+                    <div key={item} className="border-b border-Secendry-100 flex items-center p-2 w-full">
                       <label className="ml-auto" htmlFor={item}>
                         {item}
                       </label>
