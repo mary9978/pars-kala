@@ -1132,12 +1132,12 @@ video {
   border-color: rgb(239 69 53 / var(--tw-border-opacity));
 }
 
-.border-Secendry-100 {
+.border-secondary-100 {
   --tw-border-opacity: 1;
   border-color: rgb(224 224 224 / var(--tw-border-opacity));
 }
 
-.border-Secendry-200 {
+.border-secondary-200 {
   --tw-border-opacity: 1;
   border-color: rgb(159 160 159 / var(--tw-border-opacity));
 }
@@ -1147,12 +1147,12 @@ video {
   border-bottom-color: rgb(239 69 53 / var(--tw-border-opacity));
 }
 
-.border-b-Secendry-100 {
+.border-b-secondary-100 {
   --tw-border-opacity: 1;
   border-bottom-color: rgb(224 224 224 / var(--tw-border-opacity));
 }
 
-.border-t-Secendry-200 {
+.border-t-secondary-200 {
   --tw-border-opacity: 1;
   border-top-color: rgb(159 160 159 / var(--tw-border-opacity));
 }
@@ -1167,12 +1167,12 @@ video {
   background-color: rgb(255 106 0 / var(--tw-bg-opacity));
 }
 
-.bg-Secendry-100 {
+.bg-secondary-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(224 224 224 / var(--tw-bg-opacity));
 }
 
-.bg-Secendry-400 {
+.bg-secondary-400 {
   --tw-bg-opacity: 1;
   background-color: rgb(58 58 58 / var(--tw-bg-opacity));
 }
@@ -1339,22 +1339,22 @@ video {
   color: rgb(255 106 0 / var(--tw-text-opacity));
 }
 
-.text-Secendry-100 {
+.text-secondary-100 {
   --tw-text-opacity: 1;
   color: rgb(224 224 224 / var(--tw-text-opacity));
 }
 
-.text-Secendry-200 {
+.text-secondary-200 {
   --tw-text-opacity: 1;
   color: rgb(159 160 159 / var(--tw-text-opacity));
 }
 
-.text-Secendry-300 {
+.text-secondary-300 {
   --tw-text-opacity: 1;
   color: rgb(105 107 105 / var(--tw-text-opacity));
 }
 
-.text-Secendry-400 {
+.text-secondary-400 {
   --tw-text-opacity: 1;
   color: rgb(58 58 58 / var(--tw-text-opacity));
 }
@@ -1435,12 +1435,12 @@ video {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.placeholder\:text-Secendry-200::-moz-placeholder {
+.placeholder\:text-secondary-200::-moz-placeholder {
   --tw-text-opacity: 1;
   color: rgb(159 160 159 / var(--tw-text-opacity));
 }
 
-.placeholder\:text-Secendry-200::placeholder {
+.placeholder\:text-secondary-200::placeholder {
   --tw-text-opacity: 1;
   color: rgb(159 160 159 / var(--tw-text-opacity));
 }

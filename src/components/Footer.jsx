@@ -3,7 +3,7 @@ import React from "react";
 function Footer() {
   return (
     <div className="container bg-neutral-100 relative max-w-[1280px] w-full flex justify-center">
-      <footer className="flex flex-col p-3  border-t border-t-Secendry-200  w-full">
+      <footer className="flex flex-col p-3  border-t border-t-secondary-200 w-full">
         <div className="flex items-center justify-between p-2 w-full">
           <img
             src="img/parskala-types.png"
@@ -12,7 +12,7 @@ function Footer() {
             loading="lazy"
           />
 
-          <span className="flex items-center justify-between gap-2 p-3 rounded-xl border border-Secendry-200 text-Secendry-200">
+          <span className="flex items-center justify-between gap-2 p-3 rounded-xl border border-secondary-200 text-secondary-200">
             <a href="#top">
               <h4>بازگشت به بالا</h4>
             </a>
@@ -40,7 +40,7 @@ function Footer() {
               <button
                 className="relative flex items-center justify-between w-full p-4 font-semibold  
                     transition-all ease-in  cursor-pointer
-                    bg-Secendry-100 rounded-lg group text-dark-500"
+                    bg-secondary-100 rounded-lg group text-dark-500"
                 data-collapse-target="animated-collapse-1"
               >
                 <span>راهنمای خرید</span>
@@ -52,7 +52,7 @@ function Footer() {
               data-collapse="animated-collapse-1"
               className="h-0 overflow-hidden transition-all duration-300 ease-in-out"
             >
-              <div className="p-4 text-sm leading-normal text-Secendry-300 text-justify gap-2 flex flex-col items-start justify-between">
+              <div className="p-4 text-sm leading-normal text-secondary-300 text-justify gap-2 flex flex-col items-start justify-between">
                 <span className="cursor-pointer">
                   <a href="">نحوه ثبت سفارش</a>
                 </span>
@@ -74,7 +74,7 @@ function Footer() {
               <button
                 className="relative flex items-center justify-between w-full p-4 font-semibold  
                     transition-all ease-in  cursor-pointer
-                    bg-Secendry-100 rounded-lg group text-dark-500"
+                    bg-secondary-100 rounded-lg group text-dark-500"
                 data-collapse-target="animated-collapse-2"
               >
                 <span>با پارس کالا</span>
@@ -85,7 +85,7 @@ function Footer() {
               data-collapse="animated-collapse-2"
               className="h-0 overflow-hidden transition-all duration-300 ease-in-out"
             >
-              <div className="p-4 text-sm leading-normal text-Secendry-300 text-justify gap-2 flex flex-col items-start justify-between">
+              <div className="p-4 text-sm leading-normal text-secondary-300 text-justify gap-2 flex flex-col items-start justify-between">
                 <span className="cursor-pointer">
                   <a href="">حریم خصوصی</a>
                 </span>
@@ -107,7 +107,7 @@ function Footer() {
               <button
                 className="relative flex items-center justify-between w-full p-4 font-semibold  
                     transition-all ease-in  cursor-pointer
-                    bg-Secendry-100 rounded-lg group text-dark-500"
+                    bg-secondary-100 rounded-lg group text-dark-500"
                 data-collapse-target="animated-collapse-3"
               >
                 <span>درباره ما</span>
@@ -118,7 +118,7 @@ function Footer() {
               data-collapse="animated-collapse-3"
               className="h-0 overflow-hidden transition-all duration-300 ease-in-out"
             >
-              <div className="p-4 text-sm leading-normal text-Secendry-300 text-justify gap-2 flex flex-col items-start justify-between">
+              <div className="p-4 text-sm leading-normal text-secondary-300 text-justify gap-2 flex flex-col items-start justify-between">
                 <span className="cursor-pointer">
                   <a href="">اتاق خبر پارس کالا</a>
                 </span>
@@ -143,16 +143,16 @@ function Footer() {
                 <b>راهنمای خرید</b>
               </a>
             </li>
-            <li className="text-Secendry-400">
+            <li className="text-secondary-400">
               <a href="">نحوه ثبت سفارش</a>
             </li>
-            <li className="text-Secendry-400">
+            <li className="text-secondary-400">
               <a href="">رویه ارسال سفارش</a>
             </li>
-            <li className="text-Secendry-400">
+            <li className="text-secondary-400">
               <a href="">شیوه های پرداخت</a>
             </li>
-            <li className="text-Secendry-400">
+            <li className="text-secondary-400">
               <a href="">رویه های بازگرداندن کالا</a>
             </li>
           </ul>
@@ -163,16 +163,16 @@ function Footer() {
                 <b>با پارس کالا</b>
               </a>
             </li>
-            <li className="text-Secendry-400">
+            <li className="text-secondary-400">
               <a href="">حریم خصوصی</a>
             </li>
-            <li className="text-Secendry-400">
+            <li className="text-secondary-400">
               <a href="">شرایط استفاده</a>
             </li>
-            <li className="text-Secendry-400">
+            <li className="text-secondary-400">
               <a href="">رویه های بازگرداندن کالا</a>
             </li>
-            <li className="text-Secendry-400">
+            <li className="text-secondary-400">
               <a href="">پاسخ به سوالات متداول</a>
             </li>
           </ul>
@@ -183,16 +183,16 @@ function Footer() {
                 <b>درباره ما</b>
               </a>
             </li>
-            <li className="text-Secendry-400">
+            <li className="text-secondary-400">
               <a href="">اتاق خبر پارس کالا</a>
             </li>
-            <li className="text-Secendry-400">
+            <li className="text-secondary-400">
               <a href="">فروش در پارس کالا</a>
             </li>
-            <li className="text-Secendry-400">
+            <li className="text-secondary-400">
               <a href="">فرصت‌های شغلی</a>
             </li>
-            <li className="text-Secendry-400">
+            <li className="text-secondary-400">
               <a href="">تماس با پارس کالا</a>
             </li>
           </ul>
@@ -205,7 +205,7 @@ function Footer() {
             </h4>
             <p
               id="textMore"
-              className="text-Secendry-300 text-justify w-full lg:text-[18px] h-[55px] overflow-hidden line-clamp-2 transition-all ease-in-out duration-1000"
+              className="text-secondary-300 text-justify w-full lg:text-[18px] h-[55px] overflow-hidden line-clamp-2 transition-all ease-in-out duration-1000"
             >
               پارس کالا به عنوان یکی از قدیمی‌ترین فروشگاه های اینترنتی با بیش
               از یک دهه تجربه، با پایبندی به سه اصل، پرداخت در محل، ۷ روز ضمانت
@@ -236,7 +236,7 @@ function Footer() {
             </a>
           </div>
           <div className="flex items-center justify-between lg:justify-center gap-2 mt-5 w-full">
-            <div className="w-[85px] border border-Secendry-200 p-2 h-[85px] rounded-lg">
+            <div className="w-[85px] border border-secondary-200 p-2 h-[85px] rounded-lg">
               <img
                 src="img/1e5dab5a.png"
                 className="w-[73px]"
@@ -244,7 +244,7 @@ function Footer() {
                 loading="lazy"
               />
             </div>
-            <div className="w-[85px] border border-Secendry-200 p-4 h-[85px] rounded-lg">
+            <div className="w-[85px] border border-secondary-200 p-4 h-[85px] rounded-lg">
               <img
                 src="img/enamad.png"
                 className="w-[73px]"
@@ -252,7 +252,7 @@ function Footer() {
                 loading="lazy"
               />
             </div>
-            <div className="w-[85px] border border-Secendry-200 p-2 h-[85px] rounded-lg">
+            <div className="w-[85px] border border-secondary-200 p-2 h-[85px] rounded-lg">
               <img
                 src="img/samandehi.png"
                 className="w-[73px]"
