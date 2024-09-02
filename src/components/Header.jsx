@@ -5,7 +5,7 @@ import Search from "../../public/img/serchimg.jpg";
 import { provinces } from "../data";
 import React, { useState, useEffect, useRef } from "react";
 import MegaMenu from "./MegaMenu";
-import SecondHeader from "./Header/SecondHeader";
+import Navbar from "./Header/Navbar";
 
 function Header() {
   const [isSearchModalOpen, setIsSearchModalOpen] = useState(false);
@@ -47,7 +47,7 @@ function Header() {
 
   return (
     <>
-      <div className="z-50 menu max-w-[1280px] w-[95%] lg:w-full h-[60px] lg:h-auto rounded-2xl lg:rounded-none bg-white px-2 py-2.5 shadow-md fixed flex flex-col top-2 lg:top-0 justify-center lg:p-0 lg:border-b lg:border-b-secondary-200 lg:shadow-sm">
+      <div className="z-50 menu max-w-[1280px] w-[95%] lg:w-full h-[60px] lg:h-auto rounded-2xl bg-white lg:rounded-none px-2 py-2.5 shadow-md fixed flex flex-col top-2 lg:top-0 justify-center lg:p-0 lg:pb-2 lg:shadow-none">
         <div className="flex gap-2 items-center justify-between w-full lg:p-4 lg:pb-0">
           <div
             className="inline-block text-secondary-300 lg:hidden"
@@ -209,8 +209,12 @@ function Header() {
             </div>
           </div>
         </div>
-        <SecondHeader/>
+        
+          
+        
+        
       </div>
+      <Navbar/>
       {/* <!-- filteMobile --> */}
       <div className="showModalFilter z-50 w-[95%] mt-14 flex items-center justify-between lg:hidden h-[100px]">
         <div className="flex items-center justify-between gap-2">
@@ -370,7 +374,10 @@ function Header() {
           <div className="citySearch flex flex-col w-full items-center justify-center relative">
             {isInitialList ? (
               selectedList.map((item) => (
-                <div key={item.name} className="border-b border-secondary-100 w-[90%] flex items-center justify-between p-2">
+                <div
+                  key={item.name}
+                  className="border-b border-secondary-100 w-[90%] flex items-center justify-between p-2"
+                >
                   <button
                     type="button"
                     key={item.name}
@@ -410,7 +417,10 @@ function Header() {
                   </div>
 
                   {selectedList[0].counties.map((item) => (
-                    <div key={item} className="border-b border-secondary-100 flex items-center p-2 w-full">
+                    <div
+                      key={item}
+                      className="border-b border-secondary-100 flex items-center p-2 w-full"
+                    >
                       <label className="ml-auto" htmlFor={item}>
                         {item}
                       </label>
