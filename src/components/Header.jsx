@@ -47,108 +47,110 @@ function Header() {
 
   return (
     <>
-      <div className="z-50 menu max-w-[1280px] w-[95%] lg:w-full h-[60px] lg:h-auto rounded-2xl bg-white lg:rounded-none px-2 py-2.5 shadow-md fixed flex flex-col top-2 lg:top-0 justify-center lg:p-0 lg:pb-2 lg:shadow-none">
-        <div className="flex gap-2 items-center justify-between w-full lg:p-4 lg:pb-0">
-          <div
-            className="inline-block text-secondary-300 lg:hidden"
-            onClick={() => setIsMenuModalOpen(true)}
-          >
-            <svg className="w-6 h-6">
-              <use xlinkHref="#menu"></use>
-            </svg>
-          </div>
-
-          <div className="flex items-center justify-between gap-3">
-            <div className="w-[98px] max-h[40px] lg:w-[130px] lg:max-h-[60px]">
-              <Image src={Logo} alt="logo" width={130} height={60} />
+      <div className="flex items-center justify-center">
+        <div className="z-50 menu max-w-[1280px] w-[95%] lg:w-full h-[60px] lg:h-auto rounded-2xl bg-white lg:rounded-none px-2 py-2.5 shadow-md fixed flex flex-col top-2 lg:top-0 justify-center lg:p-0 lg:pb-2 lg:shadow-none">
+          <div className="flex gap-2 items-center justify-between w-full lg:p-4 lg:pb-0">
+            <div
+              className="inline-block text-secondary-300 lg:hidden"
+              onClick={() => setIsMenuModalOpen(true)}
+            >
+              <svg className="w-6 h-6">
+                <use xlinkHref="#menu"></use>
+              </svg>
             </div>
 
-            <div className="hidden lg:flex items-center justify-center">
-              <div className="rounded-lg w-[400px]">
-                <div className="flex items-center rounded-lg border border-secondary-100 w-full">
-                  <button
-                    type="button"
-                    value="Search"
-                    className="bg-gradient-to-r from-orange-600 to-orange-300 p-2 rounded-lg  text-white font-semibold"
-                  >
-                    <svg className="w-6 h-6">
-                      <use xlinkHref="#search"></use>
-                    </svg>
-                  </button>
-                  <input
-                    type="text"
-                    className="w-full bg-white p-2 text-[15px] text-secondary-100 font-semibold outline-0"
-                    placeholder="جستجو در بین 1500 محصول تخفیف دار"
-                    id=""
-                    onFocus={() => setIsSearchModalOpen(true)}
-                    onBlur={() => setIsSearchModalOpen(false)}
-                  />
-                  {/* searchModal */}
-                  <div
-                    className={`${
-                      isSearchModalOpen ? "" : "hidden"
-                    } border border-secondary-100 w-full h-auto md:w-[400px] lg:h-[450px] absolute rounded-xl mt-14 top-0 transition-all ease-in-out duration-1000 justify-center items-center bg-white`}
-                  >
-                    <div className="bg-white rounded-xl ">
-                      <div className="p-4 rounded-xl ">
-                        <Image
-                          src={Search}
-                          alt="search"
-                          width={380}
-                          height={150}
-                          className="rounded-xl"
-                        />
-                      </div>
+            <div className="flex items-center justify-between gap-3">
+              <div className="w-[98px] max-h[40px] lg:w-[130px] lg:max-h-[60px]">
+                <Image src={Logo} alt="logo" width={130} height={60} />
+              </div>
 
-                      <div className="p-4">
-                        <span className="flex items-center gap-3">
-                          <svg className="w-6 h-6 text-secondary-400">
-                            <use xlinkHref="#fire"></use>
-                          </svg>
-                          <span className="text-base font-yekanbach text-secondary-400">
-                            <b>جستجوی پرطرفدار</b>
+              <div className="hidden lg:flex items-center justify-center">
+                <div className="rounded-lg w-[400px]">
+                  <div className="flex items-center rounded-lg border border-secondary-100 w-full">
+                    <button
+                      type="button"
+                      value="Search"
+                      className="bg-gradient-to-r from-orange-600 to-orange-300 p-2 rounded-lg  text-white font-semibold"
+                    >
+                      <svg className="w-6 h-6">
+                        <use xlinkHref="#search"></use>
+                      </svg>
+                    </button>
+                    <input
+                      type="text"
+                      className="w-full bg-white p-2 text-[15px] text-secondary-100 font-semibold outline-0"
+                      placeholder="جستجو در بین 1500 محصول تخفیف دار"
+                      id=""
+                      onFocus={() => setIsSearchModalOpen(true)}
+                      onBlur={() => setIsSearchModalOpen(false)}
+                    />
+                    {/* searchModal */}
+                    <div
+                      className={`${
+                        isSearchModalOpen ? "" : "hidden"
+                      } border border-secondary-100 w-full h-auto md:w-[400px] lg:h-[450px] absolute rounded-xl mt-14 top-0 transition-all ease-in-out duration-1000 justify-center items-center bg-white`}
+                    >
+                      <div className="bg-white rounded-xl ">
+                        <div className="p-4 rounded-xl ">
+                          <Image
+                            src={Search}
+                            alt="search"
+                            width={380}
+                            height={150}
+                            className="rounded-xl"
+                          />
+                        </div>
+
+                        <div className="p-4">
+                          <span className="flex items-center gap-3">
+                            <svg className="w-6 h-6 text-secondary-400">
+                              <use xlinkHref="#fire"></use>
+                            </svg>
+                            <span className="text-base font-yekanbach text-secondary-400">
+                              <b>جستجوی پرطرفدار</b>
+                            </span>
                           </span>
-                        </span>
 
-                        <div className="flex items-center justify-between gap-x-2 gap-y-2 flex-wrap mt-8">
-                          <div className="flex items-center justify-between gap-2 p-2 rounded-full border border-secondary-100 w-auto h-auto bg-transparent text-secondary-400 group hover:bg-parsBlue transition-all ease-in-out duration-1000">
-                            <h5 className="text-xs group-hover:text-white transition-all ease-in-out duration-1000">
-                              گوشی و موبایل
-                            </h5>
+                          <div className="flex items-center justify-between gap-x-2 gap-y-2 flex-wrap mt-8">
+                            <div className="flex items-center justify-between gap-2 p-2 rounded-full border border-secondary-100 w-auto h-auto bg-transparent text-secondary-400 group hover:bg-parsBlue transition-all ease-in-out duration-1000">
+                              <h5 className="text-xs group-hover:text-white transition-all ease-in-out duration-1000">
+                                گوشی و موبایل
+                              </h5>
 
-                            <svg className="w-3 h-3 text-secondary-400 group-hover:text-white transition-all ease-in-out duration-1000">
-                              <use xlinkHref="#chevLeft"></use>
-                            </svg>
-                          </div>
+                              <svg className="w-3 h-3 text-secondary-400 group-hover:text-white transition-all ease-in-out duration-1000">
+                                <use xlinkHref="#chevLeft"></use>
+                              </svg>
+                            </div>
 
-                          <div className="flex items-center justify-between gap-2 p-2 rounded-full border border-secondary-100 w-auto h-auto bg-transparent text-secondary-400 group hover:bg-parsBlue transition-all ease-in-out duration-1000">
-                            <h5 className="text-xs group-hover:text-white transition-all ease-in-out duration-1000">
-                              آیفون
-                            </h5>
+                            <div className="flex items-center justify-between gap-2 p-2 rounded-full border border-secondary-100 w-auto h-auto bg-transparent text-secondary-400 group hover:bg-parsBlue transition-all ease-in-out duration-1000">
+                              <h5 className="text-xs group-hover:text-white transition-all ease-in-out duration-1000">
+                                آیفون
+                              </h5>
 
-                            <svg className="w-3 h-3 text-secondary-400 group-hover:text-white transition-all ease-in-out duration-1000">
-                              <use xlinkHref="#chevLeft"></use>
-                            </svg>
-                          </div>
+                              <svg className="w-3 h-3 text-secondary-400 group-hover:text-white transition-all ease-in-out duration-1000">
+                                <use xlinkHref="#chevLeft"></use>
+                              </svg>
+                            </div>
 
-                          <div className="flex items-center justify-between gap-2 p-2 rounded-full border border-secondary-100 w-auto h-auto bg-transparent text-secondary-400 group hover:bg-parsBlue transition-all ease-in-out duration-1000">
-                            <h5 className="text-xs group-hover:text-white transition-all ease-in-out duration-1000">
-                              اپل واچ
-                            </h5>
+                            <div className="flex items-center justify-between gap-2 p-2 rounded-full border border-secondary-100 w-auto h-auto bg-transparent text-secondary-400 group hover:bg-parsBlue transition-all ease-in-out duration-1000">
+                              <h5 className="text-xs group-hover:text-white transition-all ease-in-out duration-1000">
+                                اپل واچ
+                              </h5>
 
-                            <svg className="w-3 h-3 text-secondary-400 group-hover:text-white transition-all ease-in-out duration-1000">
-                              <use xlinkHref="#chevLeft"></use>
-                            </svg>
-                          </div>
+                              <svg className="w-3 h-3 text-secondary-400 group-hover:text-white transition-all ease-in-out duration-1000">
+                                <use xlinkHref="#chevLeft"></use>
+                              </svg>
+                            </div>
 
-                          <div className="flex items-center justify-between gap-2 p-2 rounded-full border border-secondary-100 w-auto h-auto bg-transparent text-secondary-400 group hover:bg-parsBlue transition-all ease-in-out duration-1000">
-                            <h5 className="text-xs group-hover:text-white transition-all ease-in-out duration-1000">
-                              مک بوک سری 8
-                            </h5>
+                            <div className="flex items-center justify-between gap-2 p-2 rounded-full border border-secondary-100 w-auto h-auto bg-transparent text-secondary-400 group hover:bg-parsBlue transition-all ease-in-out duration-1000">
+                              <h5 className="text-xs group-hover:text-white transition-all ease-in-out duration-1000">
+                                مک بوک سری 8
+                              </h5>
 
-                            <svg className="w-3 h-3 text-secondary-400 group-hover:text-white transition-all ease-in-out duration-1000">
-                              <use xlinkHref="#chevLeft"></use>
-                            </svg>
+                              <svg className="w-3 h-3 text-secondary-400 group-hover:text-white transition-all ease-in-out duration-1000">
+                                <use xlinkHref="#chevLeft"></use>
+                              </svg>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -156,65 +158,61 @@ function Header() {
                   </div>
                 </div>
               </div>
+
+              <div
+                className="border border-secondary-100 rounded-lg p-2.5 text-[10px] hidden lg:flex items-center justify-center gap-0.5 w-[100px] h-[40px]"
+                onClick={() => setIsCityModalOpen(true)}
+              >
+                <span>
+                  <svg className="w-6 h-6 text-secondary-400">
+                    <use xlinkHref="#map"></use>
+                  </svg>
+                </span>
+                <div className="flex flex-col items-center justify-between">
+                  <span>انتخاب مکان</span>
+                  <span className="text-parsBlue">فیلتر شهر</span>
+                </div>
+              </div>
             </div>
 
-            <div
-              className="border border-secondary-100 rounded-lg p-2.5 text-[10px] hidden lg:flex items-center justify-center gap-0.5 w-[100px] h-[40px]"
-              onClick={() => setIsCityModalOpen(true)}
-            >
-              <span>
-                <svg className="w-6 h-6 text-secondary-400">
-                  <use xlinkHref="#map"></use>
-                </svg>
-              </span>
-              <div className="flex flex-col items-center justify-between">
-                <span>انتخاب مکان</span>
-                <span className="text-parsBlue">فیلتر شهر</span>
+            <div className="flex items-center justify-between gap-3">
+              <div className="text-secondary-400">
+                <a href="#">
+                  <svg className="w-6 h-6">
+                    <use xlinkHref="#phone"></use>
+                  </svg>
+                </a>
+              </div>
+
+              <div className="border border-secondary-100 rounded-lg p-2.5 text-[10px] hidden lg:flex items-center justify-center gap-0.5 w-[150px] h-[40px] ">
+                <span>
+                  <svg className="w-6 h-6 text-secondary-400">
+                    <use xlinkHref="#user-cir"></use>
+                  </svg>
+                </span>
+                <span className="text-secondary-300 text-sm">
+                  <b>ورود / ثبت نام</b>
+                </span>
+              </div>
+
+              <div
+                className="text-secondary-400 relative hidden lg:inline-block"
+                onClick={() => setIsCartModalOpen(true)}
+              >
+                <a href="#">
+                  <svg className="w-8 h-8 relative">
+                    <use xlinkHref="#shop"></use>
+                  </svg>
+                </a>
+                <span className="absolute flex items-center justify-center w-[10px] h-[10px] text-white p-2 text-[10px] bg-Primary-200 rounded-full -top-1 left-0">
+                  0
+                </span>
               </div>
             </div>
           </div>
-
-          <div className="flex items-center justify-between gap-3">
-            <div className="text-secondary-400">
-              <a href="#">
-                <svg className="w-6 h-6">
-                  <use xlinkHref="#phone"></use>
-                </svg>
-              </a>
-            </div>
-
-            <div className="border border-secondary-100 rounded-lg p-2.5 text-[10px] hidden lg:flex items-center justify-center gap-0.5 w-[150px] h-[40px] ">
-              <span>
-                <svg className="w-6 h-6 text-secondary-400">
-                  <use xlinkHref="#user-cir"></use>
-                </svg>
-              </span>
-              <span className="text-secondary-300 text-sm">
-                <b>ورود / ثبت نام</b>
-              </span>
-            </div>
-
-            <div
-              className="text-secondary-400 relative hidden lg:inline-block"
-              onClick={() => setIsCartModalOpen(true)}
-            >
-              <a href="#">
-                <svg className="w-8 h-8 relative">
-                  <use xlinkHref="#shop"></use>
-                </svg>
-              </a>
-              <span className="absolute flex items-center justify-center w-[10px] h-[10px] text-white p-2 text-[10px] bg-Primary-200 rounded-full -top-1 left-0">
-                0
-              </span>
-            </div>
-          </div>
         </div>
-        
-          
-        
-        
       </div>
-      <Navbar/>
+      <Navbar />
       {/* <!-- filteMobile --> */}
       <div className="showModalFilter z-50 w-[95%] mt-14 flex items-center justify-between lg:hidden h-[100px]">
         <div className="flex items-center justify-between gap-2">
@@ -438,65 +436,66 @@ function Header() {
           </div>
         </div>
       </div>
+      <div className="flex justify-center">
+        <div className="z-50 menu w-[95%] h-[60px] rounded-2xl bg-white px-2 py-2.5 shadow-md  fixed bottom-0 mb-2  flex lg:hidden justify-around items-center gap-2">
+          <div className="flex flex-col items-center justify-center gap-1 text-secondary-400  hover:-translate-y-2 transition-all ease-in-out duration-700">
+            <svg className="w-6 h-6 ">
+              <use xlinkHref="#home"></use>
+            </svg>
+            <span className="text-[10px] tracking-tighter">
+              <a href="index.html">
+                <b>خانه</b>
+              </a>
+            </span>
+          </div>
 
-      <div className="z-50 menu w-[95%] h-[60px] rounded-2xl bg-white px-2 py-2.5 shadow-md  fixed bottom-0 mb-2  flex lg:hidden justify-around items-center gap-2">
-        <div className="flex flex-col items-center justify-center gap-1 text-secondary-400  hover:-translate-y-2 transition-all ease-in-out duration-700">
-          <svg className="w-6 h-6 ">
-            <use xlinkHref="#home"></use>
-          </svg>
-          <span className="text-[10px] tracking-tighter">
-            <a href="index.html">
-              <b>خانه</b>
-            </a>
-          </span>
-        </div>
+          <div className="flex flex-col items-center justify-center gap-1 text-secondary-400 hover:-translate-y-2 transition-all ease-in-out duration-700">
+            <svg className="w-6 h-6">
+              <use xlinkHref="#search"></use>
+            </svg>
+            <span className="text-[10px] tracking-tighter">
+              <a href="search.html">
+                <b>جستجو</b>
+              </a>
+            </span>
+          </div>
 
-        <div className="flex flex-col items-center justify-center gap-1 text-secondary-400 hover:-translate-y-2 transition-all ease-in-out duration-700">
-          <svg className="w-6 h-6">
-            <use xlinkHref="#search"></use>
-          </svg>
-          <span className="text-[10px] tracking-tighter">
-            <a href="search.html">
-              <b>جستجو</b>
-            </a>
-          </span>
-        </div>
+          <div className="flex flex-col items-center justify-center gap-1 text-secondary-400 hover:-translate-y-2 transition-all ease-in-out duration-700">
+            <svg className="w-6 h-6 text-Green-1000">
+              <use xlinkHref="#category"></use>
+            </svg>
+            <span className="text-[10px] tracking-tighter">
+              <b> دسته بندی</b>
+            </span>
+          </div>
 
-        <div className="flex flex-col items-center justify-center gap-1 text-secondary-400 hover:-translate-y-2 transition-all ease-in-out duration-700">
-          <svg className="w-6 h-6 text-Green-1000">
-            <use xlinkHref="#category"></use>
-          </svg>
-          <span className="text-[10px] tracking-tighter">
-            <b> دسته بندی</b>
-          </span>
-        </div>
+          <div
+            className="flex flex-col items-center justify-center gap-1 text-secondary-400 hover:-translate-y-2 transition-all ease-in-out duration-700"
+            onClick={() => setIsCartModalOpen(true)}
+          >
+            <svg className="w-6 h-6 ">
+              <use xlinkHref="#shop"></use>
+            </svg>
+            <span className="text-[10px] tracking-tighter">
+              <a href="shop.html">
+                <b>سبد خرید</b>
+              </a>
+            </span>
+          </div>
 
-        <div
-          className="flex flex-col items-center justify-center gap-1 text-secondary-400 hover:-translate-y-2 transition-all ease-in-out duration-700"
-          onClick={() => setIsCartModalOpen(true)}
-        >
-          <svg className="w-6 h-6 ">
-            <use xlinkHref="#shop"></use>
-          </svg>
-          <span className="text-[10px] tracking-tighter">
-            <a href="shop.html">
-              <b>سبد خرید</b>
-            </a>
-          </span>
-        </div>
-
-        <div
-          className="flex flex-col items-center justify-center gap-1 text-secondary-400 hover:-translate-y-2 transition-all ease-in-out duration-700"
-          onClick={() => {
-            setIsAccountModalOpen(true);
-          }}
-        >
-          <svg className="w-6 h-6 ">
-            <use xlinkHref="#user"></use>
-          </svg>
-          <span className={`text-[10px] tracking-tighter`}>
-            <b>حساب کاربری</b>
-          </span>
+          <div
+            className="flex flex-col items-center justify-center gap-1 text-secondary-400 hover:-translate-y-2 transition-all ease-in-out duration-700"
+            onClick={() => {
+              setIsAccountModalOpen(true);
+            }}
+          >
+            <svg className="w-6 h-6 ">
+              <use xlinkHref="#user"></use>
+            </svg>
+            <span className={`text-[10px] tracking-tighter`}>
+              <b>حساب کاربری</b>
+            </span>
+          </div>
         </div>
       </div>
       <div className={`${isMenuModalOpen ? "" : "hidden"}`} ref={wrapperRef}>
