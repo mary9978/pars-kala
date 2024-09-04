@@ -7,28 +7,19 @@ module.exports = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    fontFamily:
-    {
-      body: 'YekanBakh Regular',
-      bodybold: 'YekanBakh Bold'
-    }
-    ,
-    extend:
-    {
+    extend: {
       fontFamily: {
-        yekanbach: ['var(--font-yekanbach)']
+        yekanbach: ["var(--font-yekanbach)"],
       },
-      screens:
-      {
-        'xs': '400px',
-        'sm': '640px',
-        'md': '768px',
-        'lg': '992px',
-        'xl': '1024px',
-        'xxl': '1280px'
+      screens: {
+        xs: "400px",
+        sm: "640px",
+        md: "768px",
+        lg: "992px",
+        xl: "1024px",
+        xxl: "1280px",
       },
-      backgroundImage:
-      {
+      backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
@@ -36,59 +27,51 @@ module.exports = {
         // background: linear-gradient(90deg, rgba(130,18,41,1) 35%, rgba(37,3,10,1) 100%);
         // background: linear-gradient(90deg, rgba(147,183,74,1) 0%, rgba(73,91,38,1) 50%, rgba(11,13,7,1) 100%);
       },
-      color:
-      {
-        Primary:
-        {
-
-          "100": "#EF4535",
-          "200": "#FF6A00",
-
+      borderWidth: {
+        3: "3px",
+      },
+      colors: {
+        primary: {
+          100: "#EF4535",
+          200: "#FF6A00",
         },
-        Secendry:
-        {
-          "100": "#e0e0e0",
-          "200": "#9FA09F",
-          "300": "#696B69",
-          "400": "#3A3A3A"
+        secondary: {
+          100: "#e0e0e0",
+          200: "#9FA09F",
+          300: "#696B69",
+          400: "#3A3A3A",
         },
-        Green:
-        {
-          "100": "#00BF6F",
-          "200": "#4CAF50",
-          "300": "#1D9A34"
+        Green: {
+          100: "#00BF6F",
+          200: "#4CAF50",
+          300: "#1D9A34",
         },
-        Red:
-        {
-          "100": "#F41E1E",
-          "200": "#D32F2F"
+        Red: {
+          100: "#F41E1E",
+          200: "#D32F2F",
         },
-        Sorrel:
-        {
-          "100": "#272C48",
-          "200": "#272C48",
-          "300": "#1B1F35",
+        Sorrel: {
+          100: "#272C48",
+          200: "#272C48",
+          300: "#1B1F35",
         },
-        "Gold": "#F7A468",
-        "Purple": "#5947DA",
-        "Bronze": "#BA740B",
+        Gold: "#F7A468",
+        Purple: "#5947DA",
+        Bronze: "#BA740B",
         "Dark Blue": "#0B3193",
-        "Blue": "#1061EF",
-        "Ciyan": "#0FABC6",
-
-
+        Blue: "#1061EF",
+        Ciyan: "#0FABC6",
       },
     },
   },
-  plugins: [require("tailwind-scrollbar"), function ({ addVariant }) {
-    addVariant('child', '& > *');
-    addVariant('child-hover', '& > *:hover');
-
-  }],
-  container:
-  {
-    center: true
+  plugins: [
+    require("tailwind-scrollbar"),
+    function ({ addVariant }) {
+      addVariant("child", "& > *");
+      addVariant("child-hover", "& > *:hover");
+    },
+  ],
+  container: {
+    center: true,
   },
 };
-
-
