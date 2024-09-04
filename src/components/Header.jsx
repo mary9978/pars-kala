@@ -17,20 +17,7 @@ function Header() {
   const [selectedList, setSelectedList] = useState(provinces);
   const [isInitialList, setIsInitialList] = useState(true);
 
-  const wrapperRef = useRef(null);
 
-  useEffect(() => {
-    function handleClickOutside(event) {
-      if (wrapperRef.current && !wrapperRef.current.contains(event.target)) {
-        setIsMenuModalOpen(false);
-      }
-    }
-    document.addEventListener("mousedown", handleClickOutside);
-
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [isMenuModalOpen]);
 
   const handleItemClick = (city) => {
     const filteredProvinces = provinces.filter((item) => item.name === city);
@@ -52,7 +39,11 @@ function Header() {
           <div className="flex gap-2 items-center justify-between w-full lg:p-4 lg:pb-0">
             <div
               className="inline-block text-secondary-300 lg:hidden"
-              onClick={() => setIsMenuModalOpen(true)}
+              onClick={() =>
+                isMenuModalOpen
+                  ? setIsMenuModalOpen(false)
+                  : setIsMenuModalOpen(true)
+              }
             >
               <svg className="w-6 h-6">
                 <use xlinkHref="#menu"></use>
@@ -498,9 +489,7 @@ function Header() {
           </div>
         </div>
       </div>
-      <div className={`${isMenuModalOpen ? "" : "hidden"}`} ref={wrapperRef}>
-        <MegaMenu />
-      </div>
+      <MegaMenu toShow={isMenuModalOpen} />
     </>
   );
 }
