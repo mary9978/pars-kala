@@ -45,12 +45,12 @@ body {
 
 @layer components
 {
-    .swiper {
+    .carousel .swiper {
         width: 100%;
         height: 500px;
       }
   
-      .swiper-slide {
+      .carousel  .swiper-slide {
         text-align: center;
         font-size: 18px;
         background: #fff;
@@ -59,14 +59,14 @@ body {
         align-items: center;
       }
   
-      .swiper-slide img {
+      .carousel  .swiper-slide img {
         display: block;
         width: 100%;
         height: 100%;
         object-fit: cover;
       }
   
-      .autoplay-progress {
+      .carousel  .autoplay-progress {
         position: absolute;
         right: 16px;
         bottom: 16px;
@@ -80,7 +80,7 @@ body {
         color: var(--swiper-theme-color);
       }
   
-      .autoplay-progress svg {
+      .carousel  .autoplay-progress svg {
         --progress: 0;
         position: absolute;
         left: 0;
@@ -704,12 +704,12 @@ video {
   }
 }
 
-.swiper {
+.carousel .swiper {
   width: 100%;
   height: 500px;
 }
 
-.swiper-slide {
+.carousel .swiper-slide {
   text-align: center;
   font-size: 18px;
   background: #fff;
@@ -718,7 +718,7 @@ video {
   align-items: center;
 }
 
-.swiper-slide img {
+.carousel .swiper-slide img {
   display: block;
   width: 100%;
   height: 100%;
@@ -726,7 +726,8 @@ video {
      object-fit: cover;
 }
 
-.autoplay-progress {
+
+.carousel .autoplay-progress {
   position: absolute;
   right: 16px;
   bottom: 16px;
@@ -740,7 +741,7 @@ video {
   color: var(--swiper-theme-color);
 }
 
-.autoplay-progress svg {
+.carousel .autoplay-progress svg {
   --progress: 0;
   position: absolute;
   left: 0;

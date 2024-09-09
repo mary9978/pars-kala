@@ -18,7 +18,7 @@ export default function Carousel() {
   return (
     <div
       id="container"
-      className="container relative max-w-[1280px] w-full flex justify-center"
+      className="container carousel relative max-w-[1280px] w-full flex justify-center"
     >
       <Swiper
         modules={[Autoplay, Pagination, Navigation]}
