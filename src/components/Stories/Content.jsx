@@ -25,7 +25,6 @@ export default function Content({
         <div className="p-3" onClick={onClose}>
           <IoClose color="white" size={30} />
         </div>
-        <div className="w-[300px] h-[100px]">{id}</div>
         <div className="flex justify-center items-center">
           <Swiper
             effect={"coverflow"}
