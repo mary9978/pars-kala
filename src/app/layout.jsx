@@ -241,7 +241,7 @@ export default function RootLayout({ children }) {
           </symbol>
         </svg>
         <Header />
-        <div className="max-w-[1280px] w-full bg-white relative flex flex-col justify-center mt-5 lg:mt-[122px]">
+        <div className="max-w-[1280px] w-full bg-white flex flex-col justify-center mt-5 lg:mt-[122px]">
           {children}
         </div>
         <Footer />
