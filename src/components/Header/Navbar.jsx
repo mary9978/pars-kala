@@ -18,7 +18,6 @@ export default function Navbar() {
       setPosition(moving);
     };
     window.addEventListener("scroll", handleScroll);
-    console.log(visible);
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
