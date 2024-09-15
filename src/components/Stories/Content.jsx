@@ -9,6 +9,7 @@ import "swiper/css/effect-coverflow";
 import "../../styles/stories.css";
 import ContentWrapper from "./ContentWrapper";
 import { IoClose } from "react-icons/io5";
+import { useState } from "react";
 
 export default function Content({
   id,
@@ -17,6 +18,9 @@ export default function Content({
   showContainer,
   onClose,
 }) {
+
+  const [currentId,setCurrentId]=useState(0);
+
   return (
     showContainer && (
       <div
@@ -53,9 +57,9 @@ export default function Content({
                     defaultInterval={1500}
                     width={250}
                     height={450}
-                    onAllStoriesEnd={() => {}}
                     progressStyles={{ transformOrigin: "center right" }}
-                    isPaused={item.id === id ? false : true}
+                    isPaused={id != item.id}
+                    loop={true}
                   />
                 </ContentWrapper>
               </SwiperSlide>
