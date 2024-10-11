@@ -1,6 +1,6 @@
 "use client";
-import data from "./data.json";
-import Stories from "react-insta-stories";
+import { stories as data } from "../../data";
+import Stories from "./Stories";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, EffectCoverflow } from "swiper/modules";
 import "swiper/css";
@@ -9,7 +9,6 @@ import "swiper/css/effect-coverflow";
 import "../../styles/stories.css";
 import ContentWrapper from "./ContentWrapper";
 import { IoClose } from "react-icons/io5";
-import { useState } from "react";
 
 export default function Content({
   id,
@@ -18,9 +17,6 @@ export default function Content({
   showContainer,
   onClose,
 }) {
-
-  const [currentId,setCurrentId]=useState(0);
-
   return (
     showContainer && (
       <div
@@ -52,15 +48,7 @@ export default function Content({
             {data.map((item) => (
               <SwiperSlide key={item.id}>
                 <ContentWrapper>
-                  <Stories
-                    stories={item.slides}
-                    defaultInterval={1500}
-                    width={250}
-                    height={450}
-                    progressStyles={{ transformOrigin: "center right" }}
-                    isPaused={id != item.id}
-                    loop={true}
-                  />
+                  <Stories isActive={id === item.id} slides={item.slides} />
                 </ContentWrapper>
               </SwiperSlide>
             ))}

@@ -1,4 +1,4 @@
-[
+export const stories = [
   {
     "id": 1,
     "username": "oscritch0",
