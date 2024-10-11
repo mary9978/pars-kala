@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Content from "./Content";
 import Story from "./Story";
-import data from "./data.json";
+import { stories as data } from "../../data";
 
 export default function StoriesContainer() {
   const [activeStoryId, setActiveStoryId] = useState(1);

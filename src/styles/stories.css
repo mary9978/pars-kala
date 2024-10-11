@@ -1,4 +1,3 @@
-
 .stories .swiper_container {
   padding: 2rem 0;
   position: relative;
@@ -10,7 +9,7 @@
 }
 
 @media (max-width: 500px) {
-    .stories .swiper_container {
+  .stories .swiper_container {
     height: 47rem;
   }
   .stories .swiper-slide {
@@ -24,8 +23,7 @@
 }
 
 .stories .swiper-slide img {
-  height: 500px;
-  border-radius: 2rem;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -42,10 +40,8 @@
   justify-content: center;
 }
 
-
 .stories .swiper-button-prev,
 .stories .swiper-button-next {
-  
   width: 30px;
   height: 30px;
   color: black;
@@ -66,7 +62,7 @@
   font-weight: bold;
 }
 
-.stories .swiper-button-prev{
+.stories .swiper-button-prev {
   right: 30% !important;
 }
 
@@ -75,20 +71,20 @@
 }
 
 @media (max-width: 990px) {
-  .stories .swiper-button-prev{
+  .stories .swiper-button-prev {
     right: 25% !important;
   }
-  
+
   .stories .swiper-button-next {
     left: 25% !important;
   }
 }
 
 @media (max-width: 450px) {
-  .stories .swiper-button-prev{
+  .stories .swiper-button-prev {
     right: 5% !important;
   }
-  
+
   .stories .swiper-button-next {
     left: 5% !important;
   }
@@ -110,7 +106,7 @@
 }
 
 .stories .slider-controler .slider-arrow::after {
-  content: '';
+  content: "";
 }
 
 .stories .swiper-pagination {
